@@ -1,4 +1,4 @@
-# UWE5631-AML (Improved UWE5621 Driver for Amlogic)
+# UWE5621-AML (Improved UWE5621 Driver for Amlogic)
 
 Project ini merupakan hasil pengembangan dan perbaikan dari repository asli:
 https://github.com/simonchen007/uwe5621-aml
