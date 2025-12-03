@@ -1,34 +1,65 @@
-UWE5631-AML (Improved UWE5621 Driver for Amlogic)
+# UWE5631-AML (Improved UWE5621 Driver for Amlogic)
 
-Repository ini berisi source code hasil pengembangan dan perbaikan dari proyek asli:
-👉 https://github.com/simonchen007/uwe5621-aml
+Project ini merupakan hasil pengembangan dan perbaikan dari repository asli:
+https://github.com/simonchen007/uwe5621-aml
 
-Tujuan utama repo ini adalah memperbaiki stabilitas dan fungsionalitas driver WiFi Unisoc / UWE5621 / UWE5631 pada perangkat berbasis Amlogic (OpenWrt / Linux Kernel).
+Tujuan utama project ini adalah meningkatkan stabilitas dan fungsi driver WiFi Unisoc UWE5621/UWE5631 pada perangkat berbasis Amlogic, terutama untuk penggunaan di OpenWrt dan kernel Linux versi terbaru.
 
-✨ Perubahan & Perbaikan yang Dilakukan
+---
 
-Berikut adalah daftar perbaikan utama yang sudah dikerjakan:
+## ✨ Perubahan dan Perbaikan
 
-✅ 1. Perbaikan Bug Client WiFi Tidak Terdeteksi
+### ✔️ Perbaikan Client WiFi Tidak Terdeteksi
+Bug yang menyebabkan client tidak muncul pada daftar station (iw/hostapd_cli) telah diperbaiki.
 
-Bug di mana client tidak muncul dalam daftar station (iw / hostapd_cli) telah diperbaiki.
+### ✔️ TX/RX Per-Client Sudah Berfungsi
+Statistik transmit dan receive kini bisa muncul dan terlapor dengan benar untuk tiap device.
 
-✅ 2. Perbaikan TX/RX Per-Client
+### ✔️ Signal / Noise Sudah Muncul (Belum Stabil)
+Nilai Signal dan Noise sudah bisa dibaca, namun masih belum stabil dan membutuhkan tuning lebih lanjut.
 
-Statistik TX dan RX per device kini sudah berjalan dan tampil dengan benar.
+---
 
-🟡 3. Perbaikan Signal / Noise
+## 🎯 Tujuan Pengembangan
 
-Nilai Signal dan Noise sudah muncul, namun belum sepenuhnya stabil. Masih diperlukan tuning RF dan debugging di sisi firmware.
+- Meningkatkan stabilitas driver UWE5621/UWE5631.
+- Menghilangkan masalah throughput turun ketika banyak client tersambung.
+- Memperbaiki kompatibilitas dengan nl80211, iw, dan hostapd.
+- Optimasi gain RF, power management, dan statistik WiFi.
 
-🎯 Tujuan Pengembangan
+---
 
-Project ini bertujuan:
+## 📌 Status Saat Ini
 
-Menjadikan modul UWE5621/5631 lebih stabil di OpenWrt.
+| Fitur | Status |
+|-------|--------|
+| Client detection | ✔️ Sudah diperbaiki |
+| TX/RX per-client | ✔️ Sudah jalan |
+| Signal/Noise | ⚠️ Belum stabil |
+| Multi-client throughput | ⚠️ Perlu tuning |
+| Integrasi OpenWrt | ⏳ Progres bertahap |
 
-Menghilangkan limitasi default Unisoc yang sering menurunkan throughput ketika banyak client tersambung.
+---
 
-Memperbaiki reporting statistik driver dan kompatibilitas dengan tools standar Linux (iw, hostapd, nl80211).
+## 📁 Sumber Asli
 
-Membuka kemungkinan optimasi bandwidth, gain RF, dan power management
+Project ini dikembangkan dari:
+https://github.com/simonchen007/uwe5621-aml
+
+Terima kasih kepada pengembang asli atas manusianya.
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diterima untuk:
+- Tuning RF & Noise
+- Debug SDIO
+- Porting ke kernel baru
+- Perbaikan compatibility hostapd/wpa_supplicant
+
+---
+
+## 📄 Lisensi
+
+Mengikuti lisensi dari project asli (GPL).
