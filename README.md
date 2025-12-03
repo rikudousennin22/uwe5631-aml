@@ -2,6 +2,7 @@
 
 Project ini merupakan hasil pengembangan dan perbaikan dari repository asli:
 https://github.com/simonchen007/uwe5621-aml
+https://github.com/sib0ndt/unisoc_uwe5621
 
 Tujuan utama project ini adalah meningkatkan stabilitas dan fungsi driver WiFi Unisoc UWE5621/UWE5631 pada perangkat berbasis Amlogic, terutama untuk penggunaan di OpenWrt dan kernel Linux versi terbaru.
 
@@ -64,4 +65,5 @@ Kontribusi sangat diterima untuk:
 ## 📄 Lisensi
 
 Mengikuti lisensi dari project asli (GPL).
+
 
